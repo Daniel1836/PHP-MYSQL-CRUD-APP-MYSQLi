@@ -30,9 +30,12 @@ body {background-color: #75c7e2;}
 <body>
 <?php
 //echo $_SESSION['username'];
-if(!isset($_COOKIE['username'])){
-		header("Location: loginform.html");	
-		
+if(!isset($_COOKIE['username'])){
+
+		header("Location: loginform.html");	
+
+		
+
 	} 
 ?>
 <div class="form">
