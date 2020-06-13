@@ -32,7 +32,8 @@ body {background-color: #75c7e2;}
 </div>
 <table border="1">
 
-<?php 
+<?php 
+
 		if($_SERVER['REQUEST_METHOD'] == "POST"){
                    if(!empty($_POST['studentid']) OR !empty($_POST['firstName']) OR !empty($_POST['lastName']) OR !empty($_POST['id'])){
 	           if(isset($_POST['studentid']) && isset($_POST['firstName']) && isset($_POST['lastName']) && isset($_POST['id'])){	
@@ -92,13 +93,18 @@ body {background-color: #75c7e2;}
 	
 	
 	mysqli_close($cox); }	
- }else {
-				echo "You must enter a field";				
-			}	
+ }else {
+
+				echo "You must enter a field";				
+
+			}	
+
 			
  }
-	
-			
+	
+
+			
+
 			?>
 </table>
 </body>
