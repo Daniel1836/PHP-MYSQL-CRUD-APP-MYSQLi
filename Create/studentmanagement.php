@@ -43,13 +43,19 @@ body {background-color: #75c7e2;}
 <a href="updatestudents.php">Update Students</a><br><br>
 </div>
 
-<?php 
-		if($_SERVER['REQUEST_METHOD'] == "POST"){
-			if(!empty($_POST['firstName']) && !empty($_POST['lastName']) && !empty($_POST['studentid']) && !empty($_POST['address']) && !empty($_POST['number']) && !empty($_POST['gender']) && !empty($_POST['birth']) && !empty($_POST['email']) && !empty($_POST['id'])){
-			if(isset($_POST['firstName']) && isset($_POST['lastName']) && isset($_POST['studentid']) && isset($_POST['address']) && isset($_POST['number']) && isset($_POST['gender']) && isset($_POST['birth']) && isset($_POST['email']) && isset($_POST['id'])){	
+<?php 
+
+		if($_SERVER['REQUEST_METHOD'] == "POST"){
+
+			if(!empty($_POST['firstName']) && !empty($_POST['lastName']) && !empty($_POST['studentid']) && !empty($_POST['address']) && !empty($_POST['number']) && !empty($_POST['gender']) && !empty($_POST['birth']) && !empty($_POST['email']) && !empty($_POST['id'])){
+
+			if(isset($_POST['firstName']) && isset($_POST['lastName']) && isset($_POST['studentid']) && isset($_POST['address']) && isset($_POST['number']) && isset($_POST['gender']) && isset($_POST['birth']) && isset($_POST['email']) && isset($_POST['id'])){	
+
 				
-                        $cox = mysqli_connect("localhost", "root", "", "mydb") 
-						or die("There was a problem while connecting");
+                        $cox = mysqli_connect("localhost", "root", "", "mydb") 
+
+						or die("There was a problem while connecting");
+
 				
         $firstName = $_POST['firstName'];
  	$lastName = $_POST['lastName'];
@@ -69,15 +75,22 @@ body {background-color: #75c7e2;}
 				
 	echo "The student was inserted succesfully";
 		
-	mysqli_close($cox);			
-				
+	mysqli_close($cox);			
+
+				
+
 			}
-                        } else {
-				echo "You must enter all fields";				
-			}	
-			
+                        } else {
+
+				echo "You must enter all fields";				
+
+			}	
+
+			
+
 		}	
-                
+                
+
 	?>
 
 </body>
