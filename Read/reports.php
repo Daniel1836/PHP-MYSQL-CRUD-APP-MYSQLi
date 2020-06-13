@@ -44,30 +44,50 @@ body {background-color: #75c7e2;}
 
  <h1> Search for Students by Program </h1>
 
-<form action="searchstudprog.php" method="get">
-	Program <select name="Name">				
-		<?php
-			$cox = mysqli_connect("localhost", "root", "", "mydb") 
-					or die("There was a problem connecting");	
-			
-			$sql = "select program_id, name from programs";
-					
-			$result = mysqli_query($cox, $sql) or die("There was a problem searching");
-
-			while($row = mysqli_fetch_array($result)){
-				echo "<option value='$row[0]'>$row[1]</option>";				
-			}
-
-		?>
-	
-	</select>
-	<input type="submit" value="Search">
+<form action="searchstudprog.php" method="get">
+
+	Program <select name="Name">				
+
+		<?php
+
+			$cox = mysqli_connect("localhost", "root", "", "mydb") 
+
+					or die("There was a problem connecting");	
+
+			
+
+			$sql = "select program_id, name from programs";
+
+					
+
+			$result = mysqli_query($cox, $sql) or die("There was a problem searching");
+
+
+
+			while($row = mysqli_fetch_array($result)){
+
+				echo "<option value='$row[0]'>$row[1]</option>";				
+
+			}
+
+
+
+		?>
+
+	
+
+	</select>
+
+	<input type="submit" value="Search">
+
 </form></div><br>
 
 <table border="1">
-
+
+
 <?php 
-
+
+
   if($_SERVER['REQUEST_METHOD'] == "POST"){
   if(!empty($_POST['firstName']) OR !empty($_POST['lastName']) OR !empty($_POST['studentid']) OR !empty($_POST['address']) OR !empty($_POST['number']) OR !empty($_POST['gender']) OR !empty($_POST['birth']) OR !empty($_POST['email']) OR !empty($_POST['id'])){
   if(isset($_POST['firstName']) && isset($_POST['lastName']) && isset($_POST['studentid']) && isset($_POST['address']) && isset($_POST['number']) && isset($_POST['gender']) && isset($_POST['birth']) && isset($_POST['email']) && isset($_POST['id'])){
@@ -121,9 +141,12 @@ echo "</tr>";
 
 mysqli_close($cox);}	
 
- }else {
-				echo "You must enter a field";				
-			}	
+ }else {
+
+				echo "You must enter a field";				
+
+			}	
+
 			
  }
 
