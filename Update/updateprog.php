@@ -72,8 +72,10 @@ $programName = $_POST['Name'];
 	
 	mysqli_close($cox); }
 	
-}else {
-				echo "You must enter a field";				
+}else {
+
+				echo "You must enter a field";				
+
 			}	
 }
 
