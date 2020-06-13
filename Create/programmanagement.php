@@ -41,8 +41,10 @@ body {background-color: #75c7e2;}
 <a href="updateprog.php">Update Programs</a><br><br>
 </div>
 
-<?php 
-		if($_SERVER['REQUEST_METHOD'] == "POST"){
+<?php 
+
+		if($_SERVER['REQUEST_METHOD'] == "POST"){
+
 			if(!empty($_POST['Name']) && !empty($_POST['id']) && !empty($_POST['length'])){
                         if(isset($_POST['Name']) && isset($_POST['id']) && isset($_POST['length'])){
 
@@ -65,11 +67,16 @@ body {background-color: #75c7e2;}
 	mysqli_close($cox);
 
                        }
-}  else {
-				echo "You must enter all fields";				
-			}	
-			
-		}	
+}  else {
+
+				echo "You must enter all fields";				
+
+			}	
+
+			
+
+		}	
+
 	?>
 
 </body>
