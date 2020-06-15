@@ -1,30 +1,6 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-<title>
-Reports
-</title>
-
-<style>
-
-body {background-color: #75c7e2;}
-
-.form {border-style:solid;
-        border-radius: 25px;
-        border-color: black;
-        background-color: #59d259;
-        width: 500px;
-        padding: 20px;
-        position: absolute;
-        top: 32%;
-        left: 30%;
-        text-align: center;}
-</style>
-
-</head>
-
-<body>
+ <html>
+   <body>
 
 <div class="form">
  <h1> Search for Students in the College </h1>
@@ -53,15 +29,12 @@ body {background-color: #75c7e2;}
 			$cox = mysqli_connect("localhost", "root", "", "mydb") 
 
 					or die("There was a problem connecting");	
-
-			
+	
 
 			$sql = "select program_id, name from programs";
 
 					
-
 			$result = mysqli_query($cox, $sql) or die("There was a problem searching");
-
 
 
 			while($row = mysqli_fetch_array($result)){
@@ -70,11 +43,7 @@ body {background-color: #75c7e2;}
 
 			}
 
-
-
 		?>
-
-	
 
 	</select>
 
@@ -84,9 +53,7 @@ body {background-color: #75c7e2;}
 
 <table border="1">
 
-
 <?php 
-
 
   if($_SERVER['REQUEST_METHOD'] == "POST"){
   if(!empty($_POST['firstName']) OR !empty($_POST['lastName']) OR !empty($_POST['studentid']) OR !empty($_POST['address']) OR !empty($_POST['number']) OR !empty($_POST['gender']) OR !empty($_POST['birth']) OR !empty($_POST['email']) OR !empty($_POST['id'])){
@@ -147,11 +114,10 @@ mysqli_close($cox);}
 
 			}	
 
-			
  }
 
 ?>
-</table>
-</body>
+  </table>
+ </body>
 
 </html>
