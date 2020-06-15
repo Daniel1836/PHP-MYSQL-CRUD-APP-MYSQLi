@@ -1,34 +1,6 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-<title>
-Program Management
-</title>
-
-<style>
-
-
-body {background-color: #75c7e2;}
-
-.form {border-style:solid;
-        border-radius: 25px;
-        border-color: black;
-        background-color: #59d259;
-        width: 500px;
-        padding: 20px;
-        position: absolute;
-        top: 40%;
-        left: 35%;
-        text-align: center;}
-
-</style>
-
-</head>
-
-<body>
-
-
+ <html>
+   <body>
 <div class="form">
  <h1> Add Programs </h1>
 
@@ -37,7 +9,8 @@ body {background-color: #75c7e2;}
 		Program ID: <input type="text" name="id">
                 Length: <input type="text" name="length">
                <input type="submit" value="Create">
-	</form><br>
+</form><br>
+	
 <a href="updateprog.php">Update Programs</a><br><br>
 </div>
 
@@ -73,12 +46,10 @@ body {background-color: #75c7e2;}
 
 			}	
 
-			
-
 		}	
 
 	?>
 
-</body>
+ </body>
 
 </html>
