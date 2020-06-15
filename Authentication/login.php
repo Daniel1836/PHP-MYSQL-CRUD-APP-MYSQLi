@@ -15,11 +15,6 @@ try{
 
 		$password = mysqli_real_escape_string($cox,trim($_POST['passw']));
 
-		
-
-		
-
-
 		$sql = "SELECT full_name FROM users WHERE username='$userName' 
 
 				and password=SHA('$password')";
@@ -27,7 +22,9 @@ try{
 
 		$result = mysqli_query($cox, $sql);
 
-		if($row = mysqli_fetch_array($result)){
+		if($row = mysqli_fetch_array($result))
+		
+		{
 
 			echo "Hello $row[0], You're now logged in ";
                         session_start();
@@ -43,9 +40,6 @@ try{
 
 		}
 
-		
-
-		
 
 	} else {
                 throw new Exception("You must type a valid username/password");
@@ -54,7 +48,6 @@ try{
 
 	}
 	
-
 		} else {
 
 			header("Location: loginform.html");		
@@ -63,12 +56,9 @@ try{
 
 } catch(Exception $e){
 
-		echo "There was an error: ". $e -> getMessage();
-
-		
+		echo "There was an error: ". $e -> getMessage();	
 
 	} 
-
 
 	//setcookie('username',"$userName", time()-1);
 
@@ -76,12 +66,9 @@ try{
 
 if(isset($_SESSION['username'])){
 
-		header("Location: mainpage.php");	
-
-		
+		header("Location: mainpage.php");		
 
 	} 
-
 
 	//echo $_SESSION['username'];
 
