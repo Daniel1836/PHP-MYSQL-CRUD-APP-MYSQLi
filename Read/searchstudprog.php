@@ -1,39 +1,18 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>Search Students by Program
-</title>
-
-<style>
-
-body {background-color: #75c7e2;}
-
-</style>
-
-</head>
-<body>
+ <html>
+  <body>
 
 <?php
-
-
 
 	$cox = mysqli_connect("localhost", "root", "", "mydb") 
 
 			or die("There was a problem connecting");
 
-	
-
 	$program = $_GET['Name'];
-
-	
 
 	$sql = "SELECT students.student_id, students.first_name, students.last_name, programs.name FROM students INNER JOIN programs ON students.program_id = programs.program_id WHERE programs.program_id=$program";
 
-			
-
 	$result = mysqli_query($cox, $sql) or die("There was a problem searching");?>
-
-	
 
 	<table border="2">
 
@@ -55,14 +34,10 @@ body {background-color: #75c7e2;}
 
 		echo "</tr>";
 
-		
-
 	}
-
-
 
 ?>
 
-</table>
-</body>
+ </table>
+ </body>
 </html>
