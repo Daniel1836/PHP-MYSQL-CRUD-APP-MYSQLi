@@ -1,32 +1,6 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-<title>
-Update Student
-</title>
-
-<style>
-
-body {background-color: #75c7e2;}
-
-
-.form {border-style:solid;
-        border-radius: 25px;
-        border-color: black;
-        background-color: #59d259;
-        width: 500px;
-        padding: 20px;
-        position: absolute;
-        top: 40%;
-        left: 35%;
-        text-align: center;}
-
-</style>
-
-</head>
-
-<body>
+ <html>
+  <body>
 <div class="form">
 <?php 
 	$studentid = $_GET['student_id'];
@@ -54,8 +28,5 @@ body {background-color: #75c7e2;}
 	<input type="submit" value="Update">
 </form>
 </div>
-
-
-</body>
-
+ </body>
 </html>
