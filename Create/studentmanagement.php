@@ -1,30 +1,6 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-<title>
-Student Management
-</title>
-<style>
-
-body {background-color: #75c7e2;}
-
-.form {border-style:solid;
-        border-radius: 25px;
-        border-color: black;
-        background-color: #59d259;
-        width: 500px;
-        padding: 20px;
-        position: absolute;
-        top: 35%;
-        left: 35%;
-        text-align: center;}
-
-</style>
-
-</head>
-
-<body>
+  <html>
+     <body>
 <div class="form">
  <h1> Add Students </h1>
 
@@ -39,7 +15,8 @@ body {background-color: #75c7e2;}
                 Email: <input type="text" name="email">
                 Program ID: <input type="text" name="id">
 		<input type="submit" value="Create">
-	</form><br>
+</form><br>
+	
 <a href="updatestudents.php">Update Students</a><br><br>
 </div>
 
@@ -76,9 +53,6 @@ body {background-color: #75c7e2;}
 	echo "The student was inserted succesfully";
 		
 	mysqli_close($cox);			
-
-				
-
 			}
                         } else {
 
@@ -86,13 +60,9 @@ body {background-color: #75c7e2;}
 
 			}	
 
-			
-
 		}	
-                
-
 	?>
 
-</body>
+ </body>
 
 </html>
