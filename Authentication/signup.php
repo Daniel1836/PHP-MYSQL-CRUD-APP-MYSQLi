@@ -1,30 +1,6 @@
 <html>
-
-<head>
-
-	<title>Sign Up</title>
-
-<style>
-
-body {background-color: #75c7e2;}
-
-.form {border-style:solid;
-        border-radius: 25px;
-        border-color: black;
-        background-color: #59d259;
-        width: 500px;
-        padding: 20px;
-        position: absolute;
-        top: 40%;
-        left: 35%;
-        text-align: center;}
-</style>
-
-
-<head>
-
-<body>
-<div class="form">
+  <body>
+    <div class="form">
 
 	<form action="signup.php" method="POST">
 
@@ -38,7 +14,8 @@ body {background-color: #75c7e2;}
 
 		<input type="submit">
 
-	</form></div>
+	</form>
+     </div>
 
 <?php
 
@@ -48,8 +25,7 @@ body {background-color: #75c7e2;}
 
 		$cox = connectDB();
 
-		
-
+	
 		if(isset($_POST['fname'])&&isset($_POST['uname'])&&isset($_POST['passw'])&&isset($_POST['passw2'])){
 
 			$fullName = mysqli_real_escape_string($cox, trim($_POST['fname']));
@@ -61,18 +37,15 @@ body {background-color: #75c7e2;}
 			$password2 = mysqli_real_escape_string($cox, trim($_POST['passw2']));
 
 		
-
 			if($password == $password2){				
 
 				$insert = "INSERT INTO users (username, password, full_name) 
 
 							VALUES ('$userName', SHA('$password'), '$fullName')";
-
-							
+		
 
 				$result = mysqli_query($cox, $insert) or die("There was a problem executing the query on the database");
 
-					
 
 				echo "The user was inserted";
 
@@ -82,20 +55,12 @@ body {background-color: #75c7e2;}
 
 			}
 
-			
-
 		}
-
-		
 
 	}
 
-
-
 ?>	
 
-
-
-</body>
+ </body>
 
 </html>
