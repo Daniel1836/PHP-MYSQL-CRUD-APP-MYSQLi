@@ -1,25 +1,6 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Search a Program to Update</title>
-<style>
-
-body {background-color: #75c7e2;}
-
-.form {border-style:solid;
-        border-radius: 25px;
-        border-color: black;
-        background-color: #59d259;
-        width: 500px;
-        padding: 20px;
-        position: absolute;
-        top: 40%;
-        left: 35%;
-        text-align: center;}
-</style>
-
-</head>
-<body>
+ <html>
+  <body>
 <div class="form">
 	<form action="?php echo $_SERVER['PHP_SELF']?" method="POST">
             
@@ -69,7 +50,6 @@ $programName = $_POST['Name'];
 		echo "</tr>";
 	}
 	
-	
 	mysqli_close($cox); }
 	
 }else {
@@ -80,6 +60,6 @@ $programName = $_POST['Name'];
 }
 
 ?>
-</table>
-</body>
+ </table>
+ </body>
 </html>
