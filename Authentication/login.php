@@ -2,7 +2,6 @@
 
 	require 'databaseScript.php';
 
-
 try{
 
 	if(isset($_POST['username']) && isset($_POST['passw'])){
@@ -18,7 +17,6 @@ try{
 		$sql = "SELECT full_name FROM users WHERE username='$userName' 
 
 				and password=SHA('$password')";
-
 
 		$result = mysqli_query($cox, $sql);
 
