@@ -1,26 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Search a Student to Update</title>
-<style>
-
-body {background-color: #75c7e2;}
-
-.form {border-style:solid;
-        border-radius: 25px;
-        border-color: black;
-        background-color: #59d259;
-        width: 500px;
-        padding: 20px;
-        position: absolute;
-        top: 40%;
-        left: 35%;
-        text-align: center;}
-
-</style>
-
-</head>
-<body>
+ <body>
 <div class="form">
 	<form action="?php echo $_SERVER['PHP_SELF']?" method="POST">
                 Student ID: <input type="text" name="studentid">	
@@ -63,13 +43,8 @@ body {background-color: #75c7e2;}
 			$query .= " WHERE program_id like '%$programID%' "	;
 		}		
 	
-	
-	
-	
-	
 	$result = mysqli_query($cox, $query);?>
 <br>
-
 	<tr>
 		<th> Student ID </th>
 		<th> First Name </th>
@@ -77,7 +52,6 @@ body {background-color: #75c7e2;}
 		<th> Program ID </th>
 		<th colspan="2"> Actions </th>
 	</tr>
-	
 	
 <?php 	
 	while($row = mysqli_fetch_array($result)){
@@ -101,11 +75,8 @@ body {background-color: #75c7e2;}
 
 			
  }
-	
-
-			
 
 			?>
-</table>
-</body>
+ </table>
+ </body>
 </html>
