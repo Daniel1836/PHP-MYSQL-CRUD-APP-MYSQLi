@@ -4,7 +4,6 @@
 	$studentid = $_POST['studentid'];
 	$programId = $_POST['id'];
 	
-	
 	$cox = mysqli_connect("localhost", "root", "", "mydb") 
 			or die("There was a problem connecting");	
 	
