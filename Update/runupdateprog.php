@@ -2,7 +2,6 @@
 	$programname = $_POST['name'];
 	$programID = $_POST['id'];
 	
-	
 	$cox = mysqli_connect("localhost", "root", "", "mydb") 
 			or die("There was a problem connecting");	
 	
