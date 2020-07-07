@@ -2,4 +2,5 @@
 -Feature to view the information contained in the database (CV and Job list) in a table.
 -Ability to search existing entries and view them.  
 -Ability to update existing entries to a new entry.
--Ability to delete entries.
+-Ability to delete entries.
+-Ability to Register and Log in (not included in live site)
